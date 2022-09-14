@@ -114,7 +114,7 @@ module.exports = async function(callback) {
     //
 
     // User 1 makes 10 orders
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 50; i++) {
       result = await exchange.makeOrder(token.address, tokens(10 * i), ETHER_ADDRESS, ether(0.001), { from: user1 })
       console.log(`Made order from ${user1}`)
       // Wait 1 second
@@ -122,7 +122,7 @@ module.exports = async function(callback) {
     }
 
     // User 2 makes 10 orders
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 45; i++) {
       result = await exchange.makeOrder(ETHER_ADDRESS, ether(0.001), token.address, tokens(10 * i), { from: user2 })
       console.log(`Made order from ${user2}`)
       // Wait 1 second
